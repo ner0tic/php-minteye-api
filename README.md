@@ -37,10 +37,10 @@ Server side (validating) usage:
 ```php
 $minteye = new \Minteye\Client();
 
-$challenge = $_POST['adscaptcha_challage_field'];
-$response = $_POST['adscaptcha_repose_field'];
+$challenge  = $_POST['adscaptcha_challenge_field'];
+$response   = $_POST['adscaptcha_response_field'];
 
-$validated = $minteye->ValidateCaptcha($challange, $response, $_SERVER['REMOTE_ADDR'];
+$validated = $minteye->ValidateCaptcha($challenge, $response, $_SERVER['REMOTE_ADDR']);
 
 if( $validated )
 {
